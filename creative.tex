@@ -1,0 +1,42 @@
+\documentclass{beamer}
+\mode<presentation>
+\usepackage{tikz}
+
+\begin{document}
+\title[SCP]{Short Creative Project}
+\author{Johnson He (hejohns)}
+\date{2021-03-08}
+\begin{frame}
+    \titlepage
+\end{frame}
+\begin{frame}
+    \frametitle{About}
+\end{frame}
+\begin{frame}
+    \frametitle{Usage}
+    \framesubtitle{}
+\end{frame}
+{
+\usebackgroundtemplate
+{\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{~/Downloads/horimiya-school.jpg}}
+\begin{frame}
+    % https://tex.stackexchange.com/questions/187993/how-to-position-beamer-button-exactly
+    % https://tex.stackexchange.com/questions/7916/how-to-insert-a-background-image-in-a-beamer-frame
+    \frametitle{title}
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[shift={(0.6cm, 0.5cm)}]() at (current page.south west){
+            \hyperlink{label}{\beamerbutton{I jump to fourth slide of next frame}}
+        };
+\end{tikzpicture}
+\end{frame}
+\begin{frame}
+\begin{itemize}[<+->]
+    \item First.
+    \item Second.
+    \item Third.
+    \item Fourth.\hypertarget<4>{label}{\beamerbutton{I'm on the fourth slide}}
+    \item Fifth.
+    \end{itemize}
+\end{frame}
+}
+\end{document}
