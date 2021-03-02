@@ -1,24 +1,85 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 \mode<presentation>
+\usetheme{default}
 \usepackage{tikz}
 
 \begin{document}
+\beamertemplatenavigationsymbolsempty
 \title[SCP]{Short Creative Project}
+\subtitle{HISTART 392}
 \author{Johnson He (hejohns)}
 \date{2021-03-08}
 \begin{frame}
     \titlepage
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[shift={(-1.0cm, 0.5cm)}]() at (current page.south east){
+            \hyperlink{AHome}{\beamerbutton{A}}
+        };
+        \node[shift={(-0.5cm, 0.5cm)}]() at (current page.south east){
+            \hyperlink{BHome}{\beamerbutton{B}}
+        };
+    \end{tikzpicture}
 \end{frame}
 \begin{frame}
     \frametitle{About}
+    \hypertarget<1->{AHome}{AHome}
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[shift={(-1.0cm, 0.5cm)}]() at (current page.south east){
+            \hyperlink{AHome}{\beamerbutton{A}}
+        };
+        \node[shift={(-0.5cm, 0.5cm)}]() at (current page.south east){
+            \hyperlink{BHome}{\beamerbutton{B}}
+        };
+    \end{tikzpicture}
 \end{frame}
 \begin{frame}
     \frametitle{Usage}
     \framesubtitle{}
+    \hypertarget<1->{BHome}{BHome}
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[shift={(-1.0cm, 0.5cm)}]() at (current page.south east){
+            \hyperlink{AHome}{\beamerbutton{A}}
+        };
+        \node[shift={(-0.5cm, 0.5cm)}]() at (current page.south east){
+            \hyperlink{BHome}{\beamerbutton{B}}
+        };
+    \end{tikzpicture}
 \end{frame}
+\section{one}
 {
-\usebackgroundtemplate
-{\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{~/Downloads/horimiya-school.jpg}}
+% https://tex.stackexchange.com/questions/475375/absolute-positioning-of-images-in-beamers-background-canvas?noredirect=1&lq=1
+\usebackgroundtemplate{
+    \vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil
+        \tikz\node[opacity=1.0, inner sep=0pt]{\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{horimiya-masks.jpg}};
+        \hfil}\vfil}
+}
+\begin{frame}
+    % https://tex.stackexchange.com/questions/187993/how-to-position-beamer-button-exactly
+    % https://tex.stackexchange.com/questions/7916/how-to-insert-a-background-image-in-a-beamer-frame
+    \frametitle{title}
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[shift={(0.6cm, 0.5cm)}]() at (current page.south west){
+            \hyperlink{label}{\beamerbutton{I jump to fourth slide of next frame}}
+        };
+    \end{tikzpicture}
+\end{frame}
+\begin{frame}
+\begin{itemize}[<+->]
+    \item First.
+    \item Second.
+    \item Third.
+    \item Fourth.\hypertarget<4>{label}{\beamerbutton{I'm on the fourth slide}}
+    \item Fifth.
+    \end{itemize}
+\end{frame}
+}
+{
+% https://tex.stackexchange.com/questions/475375/absolute-positioning-of-images-in-beamers-background-canvas?noredirect=1&lq=1
+\usebackgroundtemplate{
+    \vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil
+        \tikz\node[opacity=1.0, inner sep=0pt]{\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{horimiya-school.jpg}};
+        \hfil}\vfil}
+}
 \begin{frame}
     % https://tex.stackexchange.com/questions/187993/how-to-position-beamer-button-exactly
     % https://tex.stackexchange.com/questions/7916/how-to-insert-a-background-image-in-a-beamer-frame
