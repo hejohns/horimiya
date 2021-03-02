@@ -18,18 +18,19 @@
         };
     \end{tikzpicture}
 }
-\newcommand{\usebackground}[1]{
+\newcommand{\usebackground}[2][1.0]{
     % https://tex.stackexchange.com/questions/7916/how-to-insert-a-background-image-in-a-beamer-frame
     % https://tex.stackexchange.com/questions/475375/absolute-positioning-of-images-in-beamers-background-canvas?noredirect=1&lq=1
     \usebackgroundtemplate{
         \vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil
-            \tikz\node[opacity=1.0, inner sep=0pt]{\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{#1}};
+                \tikz\node[opacity=#1, inner sep=0pt]{\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{#2}};
         \hfil}\vfil}
     }
 }
 
 \begin{document}
 \beamertemplatenavigationsymbolsempty
+\setbeamercolor{button}{bg=blue, fg=white}
 \title[SCP]{Short Creative Project}
 \subtitle{HISTART 392}
 \author{Johnson He (hejohns)}
@@ -44,6 +45,7 @@
         \item Made using beamer (and a lot of hyperlinks and a little TikZ)
         \item That said, this is NOT a slide show
         \item See Usage/Help
+        \item Sources at the very end
     \end{itemize}
     \homebuttons
 \end{frame}
@@ -59,32 +61,88 @@
                 \item (buttons can be quite slow-- try not to spam them)
             \end{itemize}
         \item There is an A side and B side (like a vinyl)
-        \item Navigate by clicking the buttons!
+        \item Navigate by clicking the buttons
     \end{itemize}
     \homebuttons
 \end{frame}
 \section{A}
 {
-\usebackground{horimiya-masks.jpg}
-% AHome
-\begin{frame}
-    \hypertarget<1->{AHome}{}
-    \homebuttons
-\end{frame}
-\begin{frame}
-    \homebuttons
-\end{frame}
+    \usebackground{horimiya-masks.jpg}
+    % AHome
+    \begin{frame}
+        \hypertarget<1->{AHome}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[shift={(5.7cm, 6.5cm)}]() at (current page.south west){
+                \hyperlink{usage}{\beamerbutton{masks}}
+            };
+            \node[shift={(9.8cm, 3.8cm)}]() at (current page.south west){
+                \hyperlink{usage}{\beamerbutton{traditional clothing}}
+            };
+            \node[shift={(6.9cm, 8.8cm)}]() at (current page.south west){
+                \hyperlink{usage}{\beamerbutton{sailor uniform}}
+            };
+            \node[shift={(6.5cm, 1.4cm)}]() at (current page.south west){
+                    \hyperlink{usage}{\beamerbutton{street wear}}
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(5.7cm, 6.5cm)}]() at (current page.south west){
+                    test test\\ test test\\ test
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(9.8cm, 3.8cm)}]() at (current page.south west){
+                    test test\\ test test\\ test
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
 }
 \section{B}
 {
-\usebackground{horimiya-school.jpg}
-% BHome
-\begin{frame}
-    \hypertarget<1->{BHome}{}
-    \homebuttons
-\end{frame}
-\begin{frame}
-    \homebuttons
-\end{frame}
+    \usebackground{horimiya-school.jpg}
+    % BHome
+    \begin{frame}
+        \hypertarget<1->{BHome}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[shift={(10.5cm, 3.4cm)}]() at (current page.south west){
+                \hyperlink{usage}{\beamerbutton{overwork}}
+            };
+            \node[shift={(6.4cm, 2.8cm)}]() at (current page.south west){
+                \hyperlink{usage}{\beamerbutton{school uniforms}}
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
 }
+{
+% overwork
+\usebackground[0.2]{horimiya-school.jpg}
+    \begin{frame}
+        \homebuttons
+    \end{frame}
+}
+\section{Sources}
+\begin{frame}
+    \frametitle{Sources}
+    \begin{itemize}
+        \item Horimiya manga
+        \begin{itemize}
+            \item A: Volume 16, Chapter 120, Page 1 (Volume Cover)
+            \item B: ??
+        \end{itemize}
+    \end{itemize}
+\end{frame}
 \end{document}
