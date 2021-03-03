@@ -79,29 +79,13 @@
                 \hyperlink{traditionalClothing}{\beamerbutton{traditional clothing}}
             };
             \node[shift={(6.9cm, 8.8cm)}]() at (current page.south west){
-                \hyperlink{usage}{\beamerbutton{sailor uniform}}
+                \hyperlink{su}{\beamerbutton{sailor uniform}}
             };
             \node[shift={(6.5cm, 1.4cm)}]() at (current page.south west){
-                    \hyperlink{usage}{\beamerbutton{street wear}}
+                \hyperlink{sw}{\beamerbutton{street wear}}
             };
             \node[shift={(7.5cm, 1.8cm)}]() at (current page.south west){
-                    \hyperlink{horimiya}{\beamerbutton{horimiya}}
-            };
-        \end{tikzpicture}
-        \homebuttons
-    \end{frame}
-}
-{
-% horimiya
-    \usebackground[0.3]{horimiya-masks.jpg}
-    \begin{frame}
-        \hypertarget<1->{horimiya}{}
-        \begin{tikzpicture}[remember picture, overlay]
-            \node[draw, align=center, fill=blue, text=white, shift={(7.5cm, 1.8cm)}]() at (current page.south west){
-                    Horimiya is a romantic comedy\\ manga written/set in late 2000's Tokyo.\\
-                    The main pair are in their last year of high school.\\
-                    The title is a concatonation of\\ the names of the main characters:\\
-                    Hori (left) and Miyamura (right).
+                \hyperlink{horimiya}{\beamerbutton{horimiya}}
             };
         \end{tikzpicture}
         \homebuttons
@@ -251,6 +235,55 @@
         \homebuttons
     \end{frame}
 }
+{
+% su
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{su}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(6.9cm, 6.8cm)}]() at (current page.south west){
+                Uniforms are pervasive in Japan.\\
+                Employee uniforms and even\\ job-hunting uniforms are common.\\
+                School uniforms are no exception:\\
+                Elementary, middle, and high schools\\ each have their own typical uniforms.\\
+                The sailor uniform is common for middle schools
+                \cite{nippon}.
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+% sw
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{sw}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(6.5cm, 1.4cm)}]() at (current page.south west){
+                The main pair donning street wear.\\
+                In contrast with the main cover,\\
+                the trench coat and pants,\\ and jacket and skirt are Western.
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+% horimiya
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{horimiya}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(7.5cm, 1.8cm)}]() at (current page.south west){
+                    Horimiya is a romantic comedy\\ manga written/set in late 2000's Tokyo.\\
+                    The main pair are in their last year of high school.\\
+                    The title is a concatonation of\\ the names of the main characters:\\
+                    Hori (left) and Miyamura (right).
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
 \section{B}
 {
     \usebackground{horimiya-school.jpg}
@@ -300,6 +333,9 @@
         \bibitem{ct}
         Alicia Joy,
         \href{https://theculturetrip.com/asia/japan/articles/traditional-japanese-masks-and-what-theyre-used-for/}{https://theculturetrip.com/asia/japan/articles/traditional-japanese-masks-and-what-theyre-used-for}
+        \bibitem{nippon}
+        Mitamura Fukiko,
+        \href{https://www.nippon.com/en/currents/d00216/}{https://www.nippon.com/en/currents/d00216}
     \end{thebibliography}
 \end{frame}
 \end{document}
