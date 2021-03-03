@@ -305,14 +305,32 @@
 % overwork
     \usebackground[0.2]{horimiya-school.jpg}
     \begin{frame}
+        \hypertarget<1->{overwork}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(10.5cm, 3.4cm)}]() at (current page.south west){
+                    While the manga is about school life,\\
+                    friendship, and romance, darker underpinnings\\
+                    color the reception of this story,\\
+                    especially for younger adult readers.
+            };
+            \node[shift={(4.0cm, 7.5cm)}]() at (current page.south west){
+                \hyperlink{kimonoRole}{\beamerbutton{90's/lost decade}}
+            };
+            \node[shift={(4.0cm, 4.5cm)}]() at (current page.south west){
+                \hyperlink{kimonoStyle}{\beamerbutton{kimono styles}}
+            };
+            \node[shift={(4.0cm, 1.5cm)}]() at (current page.south west){
+                \hyperlink{kimonoCover}{\beamerbutton{why on a volume cover?}}
+            };
+        \end{tikzpicture}
         \homebuttons
     \end{frame}
 }
 \section{Sources}
-\begin{frame}
+\begin{frame}[allowframebreaks]
     \frametitle{Sources}
     \begin{thebibliography}{00}
-        \setbeamertemplate{bibliography item}{\(\blacktriangleright\)}
+        \setbeamertemplate{bibliography item}{\insertbiblabel}
         \bibitem{horimiyaManga}
         Horimiya manga
         \begin{itemize}
@@ -336,6 +354,12 @@
         \bibitem{nippon}
         Mitamura Fukiko,
         \href{https://www.nippon.com/en/currents/d00216/}{https://www.nippon.com/en/currents/d00216}
+        \bibitem{invest}
+        \href{https://www.investopedia.com/terms/l/lost-decade.asp}{https://www.investopedia.com/terms/l/lost-decade.asp}
+        \bibitem{karo}
+        Yuko Kawanishi.
+        \textit{On Karo-Jisatsu (Suicide by Overwork): Why Do Japanese Workers Work Themselves to Death?}.
+        International Journal of Mental Health, SPRING 2008, Vol. 37, No. 1, Mortality, Morbidity, and Mental Illness (SPRING 2008), pp. 61-74
     \end{thebibliography}
 \end{frame}
 \end{document}
