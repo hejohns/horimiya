@@ -73,7 +73,7 @@
         \hypertarget<1->{AHome}{}
         \begin{tikzpicture}[remember picture, overlay]
             \node[shift={(5.7cm, 6.5cm)}]() at (current page.south west){
-                \hyperlink{usage}{\beamerbutton{masks}}
+                \hyperlink{masks}{\beamerbutton{masks}}
             };
             \node[shift={(9.8cm, 3.8cm)}]() at (current page.south west){
                 \hyperlink{traditionalClothing}{\beamerbutton{traditional clothing}}
@@ -84,6 +84,25 @@
             \node[shift={(6.5cm, 1.4cm)}]() at (current page.south west){
                     \hyperlink{usage}{\beamerbutton{street wear}}
             };
+            \node[shift={(7.5cm, 1.8cm)}]() at (current page.south west){
+                    \hyperlink{horimiya}{\beamerbutton{horimiya}}
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+% horimiya
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{horimiya}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(7.5cm, 1.8cm)}]() at (current page.south west){
+                    Horimiya is a romantic comedy\\ manga written/set in late 2000's Tokyo.\\
+                    The main pair are in their last year of high school.\\
+                    The title is a concatonation of\\ the names of the main characters:\\
+                    Hori (left) and Miyamura (right).
+            };
         \end{tikzpicture}
         \homebuttons
     \end{frame}
@@ -92,9 +111,51 @@
 % masks
     \usebackground[0.3]{horimiya-masks.jpg}
     \begin{frame}
+        \hypertarget<1->{masks}{}
         \begin{tikzpicture}[remember picture, overlay]
             \node[draw, align=center, fill=blue, text=white, shift={(5.7cm, 6.5cm)}]() at (current page.south west){
-                    test test\\ test test\\ test
+                    On this volume cover, the eponymous\\ characters wear festival masks
+            };
+            \node[shift={(9.5cm, 4.5cm)}]() at (current page.south west){
+                \hyperlink{masksWhat}{\beamerbutton{what are they?}}
+            };
+            \node[shift={(9.5cm, 2.5cm)}]() at (current page.south west){
+                \hyperlink{masksCover}{\beamerbutton{why on a volume cover?}}
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+% masksWhat
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{masksWhat}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(9.5cm, 4.5cm)}]() at (current page.south west){
+                    These masks are often worn during\\ festivals and shrine events (\cite{ct}).\\
+                    They come from folklore or Noh theater.
+            };
+            \node[shift={(-2.0cm, 0.5cm)}]() at (current page.south east){
+                \hyperlink{masks}{\beamerbutton{Back}}
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+% masksCover
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{masksCover}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(9.5cm, 2.5cm)}]() at (current page.south west){
+                    Paired with the kimonos,\\
+                    the festival masks elicit a sense of excitedness and enjoyment.\\
+                    It's an escape from their usual school uniform-clad days.
+            };
+            \node[shift={(-2.0cm, 0.5cm)}]() at (current page.south east){
+                \hyperlink{masks}{\beamerbutton{Back}}
             };
         \end{tikzpicture}
         \homebuttons
@@ -107,7 +168,7 @@
         \hypertarget<1->{traditionalClothing}{}
         \begin{tikzpicture}[remember picture, overlay]
             \node[draw, align=center, fill=blue, text=white, shift={(9.8cm, 3.8cm)}]() at (current page.south west){
-                    On this volume cover, the eponymous\\ characters wear traditional kimonos
+                On this volume cover, the eponymous\\ characters wear traditional kimonos
             };
             \node[shift={(6.0cm, 7.5cm)}]() at (current page.south west){
                 \hyperlink{kimonoRole}{\beamerbutton{role of kimonos today}}
@@ -236,6 +297,9 @@
         Betty Y. Siffert.
         \textit{Hinagata Bon: The Art Institute of Chicago Collection of Kimono Pattern Books}.
         Art Institute of Chicago Museum Studies , 1992, Vol. 18, No. 1, Five Centuries of Japanese Kimono: On This Sleeve of Fondest Dreams (1992), pp. 86-94+103
+        \bibitem{ct}
+        Alicia Joy,
+        \href{https://theculturetrip.com/asia/japan/articles/traditional-japanese-masks-and-what-theyre-used-for/}{https://theculturetrip.com/asia/japan/articles/traditional-japanese-masks-and-what-theyre-used-for}
     \end{thebibliography}
 \end{frame}
 \end{document}
