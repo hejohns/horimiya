@@ -76,7 +76,7 @@
                 \hyperlink{usage}{\beamerbutton{masks}}
             };
             \node[shift={(9.8cm, 3.8cm)}]() at (current page.south west){
-                \hyperlink{usage}{\beamerbutton{traditional clothing}}
+                \hyperlink{traditionalClothing}{\beamerbutton{traditional clothing}}
             };
             \node[shift={(6.9cm, 8.8cm)}]() at (current page.south west){
                 \hyperlink{usage}{\beamerbutton{sailor uniform}}
@@ -89,6 +89,7 @@
     \end{frame}
 }
 {
+% masks
     \usebackground[0.3]{horimiya-masks.jpg}
     \begin{frame}
         \begin{tikzpicture}[remember picture, overlay]
@@ -100,11 +101,90 @@
     \end{frame}
 }
 {
+% traditional clothing
     \usebackground[0.3]{horimiya-masks.jpg}
     \begin{frame}
+        \hypertarget<1->{traditionalClothing}{}
         \begin{tikzpicture}[remember picture, overlay]
             \node[draw, align=center, fill=blue, text=white, shift={(9.8cm, 3.8cm)}]() at (current page.south west){
-                    test test\\ test test\\ test
+                    On this volume cover, the eponymous\\ characters wear traditional kimonos
+            };
+            \node[shift={(6.0cm, 7.5cm)}]() at (current page.south west){
+                \hyperlink{kimonoRole}{\beamerbutton{role of kimonos today}}
+            };
+            \node[shift={(6.0cm, 5.5cm)}]() at (current page.south west){
+                \hyperlink{kimonoStyle}{\beamerbutton{kimono styles}}
+            };
+            \node[shift={(6.0cm, 2.0cm)}]() at (current page.south west){
+                \hyperlink{kimonoCover}{\beamerbutton{why on a volume cover?}}
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+% kimonoRole
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{kimonoRole}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(6.0cm, 5.5cm)}]() at (current page.south west){
+                Traditionally, \textit{kimono} encompassed both\\ everyday wear and more special attires,\\
+                but the modern kimono solely comes from\\ the decorative festive wear of the\\ premodern elite
+                (\cite{gg} p.353).\\
+                Nowadays, kimono are worn primarily for formal special occasions.\\
+                Modern kimono have come not just to be a\\ symbol of Japaneseness,
+                but also of feminine etiquette,\\ socialization, and conformance for women (\cite{gg} p.362).\\
+                For the annual coming-of-age ceremony,\\
+                twenty year old women are expected to wear elaborate kimonos,\\
+                while men are expected to wear a Western suit (\cite{gg} p.352).
+            };
+            \node[shift={(-2.0cm, 0.5cm)}]() at (current page.south east){
+                \hyperlink{traditionalClothing}{\beamerbutton{Back}}
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+% kimonoStyle
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{kimonoStyle}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(6.0cm, 5.5cm)}]() at (current page.south west){
+                Kimono vary depending on their purpose.\\
+                They can be made of silk, cotton, or linen.\\
+                Patterns invoke seasons or certain artistic tastes (\cite{patternBook}).\\
+                Notably, floral patterns are reserved for the refined woman
+                (\cite{jDaily}).\\
+                Interestingly, Kyoko (the girl on the cover) wears a plain kimono\\
+                with tasuki, cloth tied around the sleeves to improve mobility.\\
+                Compared to having her wear a floral restricting kimono,\\
+                this simpler more active style better represents her character.
+            };
+            \node[shift={(-2.0cm, 0.5cm)}]() at (current page.south east){
+                \hyperlink{traditionalClothing}{\beamerbutton{Back}}
+            };
+        \end{tikzpicture}
+        \homebuttons
+    \end{frame}
+}
+{
+% kimonoCover
+    \usebackground[0.3]{horimiya-masks.jpg}
+    \begin{frame}
+        \hypertarget<1->{kimonoCover}{}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[draw, align=center, fill=blue, text=white, shift={(6.0cm, 2.0cm)}]() at (current page.south west){
+                Manga artists like to draw their characters in different outfits and\\
+                especially ones the characters don't typically wear.\\
+                But more than that, as kimonos today are\\ associated with festivals,
+                this cover radiates high energy--\\
+                an attractive quality for this genre of light fiction.
+            };
+            \node[shift={(-2.0cm, 0.5cm)}]() at (current page.south east){
+                \hyperlink{traditionalClothing}{\beamerbutton{Back}}
             };
         \end{tikzpicture}
         \homebuttons
@@ -129,7 +209,7 @@
 }
 {
 % overwork
-\usebackground[0.2]{horimiya-school.jpg}
+    \usebackground[0.2]{horimiya-school.jpg}
     \begin{frame}
         \homebuttons
     \end{frame}
@@ -137,12 +217,25 @@
 \section{Sources}
 \begin{frame}
     \frametitle{Sources}
-    \begin{itemize}
-        \item Horimiya manga
+    \begin{thebibliography}{00}
+        \setbeamertemplate{bibliography item}{\(\blacktriangleright\)}
+        \bibitem{horimiyaManga}
+        Horimiya manga
         \begin{itemize}
             \item A: Volume 16, Chapter 120, Page 1 (Volume Cover)
-            \item B: ??
+            \item B: Volume 13, Chapter 100, Page 2
         \end{itemize}
-    \end{itemize}
+        \bibitem{gg}
+        Ofra Goldstein-Gidoni.
+        \textit{Kimono and the Construction of Gendered and Cultural Identities}.
+        Ethnology, Autumn, 1999, Vol. 38, No. 4 (Autumn, 1999), pp. 351-370
+        \bibitem{jDaily}
+        Cynthia Green,
+        \href{https://daily.jstor.org/the-surprising-history-of-the-kimono/}{https://daily.jstor.org/the-surprising-history-of-the-kimono}
+        \bibitem{patternBook}
+        Betty Y. Siffert.
+        \textit{Hinagata Bon: The Art Institute of Chicago Collection of Kimono Pattern Books}.
+        Art Institute of Chicago Museum Studies , 1992, Vol. 18, No. 1, Five Centuries of Japanese Kimono: On This Sleeve of Fondest Dreams (1992), pp. 86-94+103
+    \end{thebibliography}
 \end{frame}
 \end{document}
