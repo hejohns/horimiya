@@ -1,0 +1,9 @@
+[2022-10-22]
+I can't seem to compile the pdf anymore??
+
+The latex compiles, but the buttons are off the page now, even w/o changes to
+the latex sources. The ``interactive image" is unusable. Something upstream
+changed? There's no point trying to fix it now-- the pdf is as is.
+
+(I first noticed this a while back, but I thought I'd formally make a note of
+ it now.)
